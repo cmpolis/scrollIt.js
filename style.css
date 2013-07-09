@@ -29,7 +29,8 @@ a {
   cursor: pointer; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding-left: 10px; }
 
 .nav-container {
   background-color: #002e40;
