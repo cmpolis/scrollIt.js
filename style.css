@@ -54,8 +54,11 @@ nav {
   @media screen and (max-width: 640px) {
     nav {
       width: 90%; }
+      nav li {
+        width: 22%;
+      }
       nav li a {
-        font-size: 11px; } }
+        font-size: 13px; } }
 
 section {
   padding-top: 40px;
