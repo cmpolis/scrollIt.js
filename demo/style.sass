@@ -1,0 +1,82 @@
+$pageWidth: 640px
+$responsiveWidth: 90%
+$primary: #fff
+$secondary: #002E40
+
+body
+  padding: 0px
+  margin: 0px
+  font-family: 'Open Sans', sans-serif
+
+h1, h2, h4, nav li a
+  font-family: 'Headland One', Georgia, serif
+h1
+  font-size: 48px
+  margin-top: 80px
+  margin-bottom: 10px
+  color: $secondary
+h2
+  margin-top: 80px
+  font-size: 28px
+h4
+  font-size: 20px
+  margin-bottom: 10px
+.why-list
+  margin-top: 0px
+  li
+    line-height: 28px
+a
+  cursor: pointer
+ul
+  list-style: none
+
+.nav-container
+  background-color: $secondary
+  width: 100%
+  position: fixed
+  left: 0px
+nav
+  text-align: center
+  width: $pageWidth
+  margin: 0px auto
+  ul
+    padding: 0px
+  li
+    width: 24%
+    display: inline-block
+    a
+      font-size: 15px
+      color: $primary
+    a.active
+      color: #aaa
+  @media screen and (max-width: $pageWidth)
+    width: $responsiveWidth
+    li
+      a
+        font-size: 18px
+
+section
+  padding-top: 40px
+  height: 1200px
+  width: 100%
+  .content
+    margin: 0px auto
+    max-width: $pageWidth
+    @media screen and (max-width: $pageWidth)
+      width: $responsiveWidth
+    a
+      color: $secondary
+section:nth-child(odd)
+  background-color: $secondary
+  color: $primary
+  a
+    color: $primary
+  
+.bottom-link
+  margin-top: 80px
+  font-style: italic
+
+.gist-meta
+  display: none
+.file-data
+  font-size: 14px

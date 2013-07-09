@@ -1,0 +1,87 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif; }
+
+h1, h2, h4, nav li a {
+  font-family: "Headland One", Georgia, serif; }
+
+h1 {
+  font-size: 48px;
+  margin-top: 80px;
+  margin-bottom: 10px;
+  color: #002e40; }
+
+h2 {
+  margin-top: 80px;
+  font-size: 28px; }
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 10px; }
+
+.why-list {
+  margin-top: 0px; }
+  .why-list li {
+    line-height: 28px; }
+
+a {
+  cursor: pointer; }
+
+ul {
+  list-style: none; }
+
+.nav-container {
+  background-color: #002e40;
+  width: 100%;
+  position: fixed;
+  left: 0px; }
+
+nav {
+  text-align: center;
+  width: 640px;
+  margin: 0px auto; }
+  nav ul {
+    padding: 0px; }
+  nav li {
+    width: 24%;
+    display: inline-block; }
+    nav li a {
+      font-size: 15px;
+      color: white; }
+    nav li a.active {
+      color: #aaaaaa; }
+  @media screen and (max-width: 640px) {
+    nav {
+      width: 90%; }
+      nav li a {
+        font-size: 18px; } }
+
+section {
+  padding-top: 40px;
+  height: 1200px;
+  width: 100%; }
+  section .content {
+    margin: 0px auto;
+    max-width: 640px; }
+    @media screen and (max-width: 640px) {
+      section .content {
+        width: 90%; } }
+    section .content a {
+      color: #002e40; }
+
+section:nth-child(odd) {
+  background-color: #002e40;
+  color: white; }
+  section:nth-child(odd) a {
+    color: white; }
+
+.bottom-link {
+  margin-top: 80px;
+  font-style: italic; }
+
+.gist-meta {
+  display: none; }
+
+.file-data {
+  font-size: 14px; }

@@ -1,0 +1,71 @@
+!!!
+%html(xmlns='http://www.w3.org/1999/xhtml' lang='en' xml:lang='en')
+  %head
+    %title ScrollIt.js - easy vertical scrolling
+    %script(type='text/javascript' src='jquery-1.10.2.min.js')
+    %script(type='text/javascript' src='../scrollIt.min.js')
+    %link(href='http://fonts.googleapis.com/css?family=Headland+One|Open+Sans:400italic,400,700' rel='stylesheet' type='text/css')
+    %link(rel='stylesheet' href='style.css')
+    %script $(function() { $.scrollIt(); });
+  %body
+    .nav-container
+      %nav
+        %ul
+          %li
+            %a.active(data-scroll-nav='0') About
+          %li
+            %a(data-scroll-nav='1') Usage
+          %li
+            %a(data-scroll-nav='2') Options
+          %li
+            %a(data-scroll-nav='3') Credit
+
+    %section(data-scroll-index='0')
+      .content
+        %h1 ScrollIt.js
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="ScrollIt.js - easy vertical scrolling" data-via="ChrisPolis">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <iframe src="http://ghbtns.com/github-btn.html?user=cmpolis&repo=scrollIt.js&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        %h2 About
+        %p ScrollIt.js<i>(scroll&#8226;it&#8226;dot&#8226;js)</i> makes it easy to make scrolling pages like this one or add scrolling functionality to existing pages. <a href='http://bytemuse.com/post/easy-scrolling-pages-with-scrollit-dot-js/'>Here's a brief blog plost explaining it.</a>
+        %h4 This is why it rocks:
+        %ul.why-list
+          %li <b>Easy to implement:</b> One JS call, just put data- attributes on the DOM
+          %li <b>Lightweight:</b> ~1kb minified
+          %li <b>Active Class:</b> Your navigation is updated automatically 
+          %li <b>Configurable:</b> Set the animation easing, duration, callbacks and more 
+          %li <b>Keyboard Navigation:</b> Press the up and down keys to move... 
+    %section(data-scroll-index='1')
+      .content
+        %h2 Usage
+        %p 
+          1) Include jQuery and scrollIt.js
+          <script src="https://gist.github.com/cmpolis/5954658.js"></script>
+        %p 
+          2) Put a <i>data-scroll-index</i> attribute on each section
+          <script src="https://gist.github.com/cmpolis/5954675.js"></script>
+        %p 
+          3) Put corresponding <i>data-scroll-nav</i> attributes on each nav element
+          <script src="https://gist.github.com/cmpolis/5954686.js"></script>
+        %p 
+          4) For links to sections, put on a <i>data-scroll-goto</i> attribute
+          <script src="https://gist.github.com/cmpolis/5954690.js"></script>
+
+        %p 
+          5) Call <i>scrollIt()</i>
+          <script src="https://gist.github.com/cmpolis/5954703.js"></script>
+        %p <i>View the source of this page for an example</i>
+    %section(data-scroll-index='2')
+      .content
+        %h2 Options
+        %p To customize scrollIt.js, simply pass in an options object: <i>(defaults shown)</i>
+        <script src="https://gist.github.com/cmpolis/5954639.js"></script> 
+    %section(data-scroll-index='3')
+      .content
+        %h2 Credit
+        %p ScrollIt.js was created by <a href='http://twitter.com/chrispolis'>@ChrisPolis</a>. 
+        %p Feel free to use, share and fork it. <a href='https://github.com/cmpolis/scrollIt.js'>It's on Github.</a> 
+      
+        %p Enjoy!
+        %p.bottom-link
+          %a(data-scroll-goto='0') Back to top
