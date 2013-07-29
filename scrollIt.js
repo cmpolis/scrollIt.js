@@ -44,7 +44,7 @@
     };
     $(window).scroll(watchActive).scroll();
 
-    $(window).keydown(function(evt) {
+    $(window).on('keydown', function(evt) {
       var key = evt.which;
       if(key == settings.upKey && active > 0) {
         navigate(parseInt(active) - 1);
