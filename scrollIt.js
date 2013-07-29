@@ -56,10 +56,10 @@
       return true;
     });
 
-    $('[data-scroll-nav], [data-scroll-goto]').click(function(evt) {
+     $('body').on('click',function(evt) {
       var target = $(evt.target).attr('data-scroll-nav') || 
                    $(evt.target).attr('data-scroll-goto');
       navigate(target);
-    });
+    },'[data-scroll-nav], [data-scroll-goto]');
   };
 }(jQuery));
