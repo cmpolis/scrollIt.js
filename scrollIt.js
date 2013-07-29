@@ -29,9 +29,9 @@
         /*
          * DECLARATIONS
          */
-        var settings = $.extend(defaults, options);
-        var active = 0;
-        var lastIndex = $('[data-scroll-index]:last').attr('data-scroll-index');
+        var settings = $.extend(defaults, options),
+            active = 0,
+            lastIndex = $('[data-scroll-index]:last').attr('data-scroll-index');
 
         /*
          * METHODS
