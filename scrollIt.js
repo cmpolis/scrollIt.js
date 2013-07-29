@@ -42,7 +42,7 @@
       var newActive = visible.first().attr('data-scroll-index');
       updateActive(newActive);
     };
-    $(window).scroll(watchActive).scroll();
+    $(window).on('scroll',watchActive).on('scroll');
 
     $(window).on('keydown', function(evt) {
       var key = evt.which;
