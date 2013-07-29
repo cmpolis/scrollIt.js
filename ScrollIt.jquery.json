@@ -1,0 +1,42 @@
+{
+    "name": "ScrollIt",
+    "title": "ScrollIt",
+    "description": "ScrollIt.js(scroll•it•dot•js) makes it easy to make long, vertically scrolling pages.",
+    "keywords": [
+        "page",
+        "scroll",
+        "navigation",
+        "keydown",
+        "keyboard"
+    ],
+    "version": "1.0.1",
+    "author": {
+        "name": "Chris Polis and Adam Merrifield",
+        "url": "https://github.com/cmpolis/scrollIt.js/blob/master/AUTHORS.txt"
+    },
+    "maintainers": [
+        {
+            "name": "Chris Polis",
+            "email": "cmpolis@gmail.com",
+            "url": "http://ByteMuse.com"
+        },
+        {
+            "name": "Adam Merrifield",
+            "email": "macagp@gmail.com",
+            "url": "http://seydesign.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/cmpolis/scrollIt.js/blob/master/LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/cmpolis/scrollIt.js/issues",
+    "homepage": "https://github.com/cmpolis/scrollIt.js",
+    "docs": "https://github.com/cmpolis/scrollIt.js",
+    "download": "https://github.com/cmpolis/scrollIt.js/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.8"
+    }
+}
