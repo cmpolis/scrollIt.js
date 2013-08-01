@@ -1,4 +1,4 @@
-## [Demo and more information](http://github.com/cmpolis/scrollIt.js)
+### [Demo and more information](http://bytemuse.com/scrollIt.js)
 
 ## About
 ScrollIt.js(scroll•it•dot•js) makes it easy to make long, vertically scrolling pages. This is why it rocks:
