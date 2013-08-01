@@ -1,0 +1,4 @@
+Authors ordered by first contribution
+
+Chris Polis <cmpolis@gmail.com>
+Adam Merrifield <macagp@gmail.com>
