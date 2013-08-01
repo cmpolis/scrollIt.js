@@ -59,7 +59,7 @@
     $('[data-scroll-nav], [data-scroll-goto]').click(function(evt) {
       var target = $(evt.target).attr('data-scroll-nav') || 
                    $(evt.target).attr('data-scroll-goto');
-      navigate(target);
+      navigate(parseInt(target));
     });
   };
 }(jQuery));
