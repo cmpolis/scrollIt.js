@@ -29,7 +29,8 @@ a {
   cursor: pointer; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding-left: 10px; }
 
 .nav-container {
   background-color: #002e40;
@@ -54,8 +55,11 @@ nav {
   @media screen and (max-width: 640px) {
     nav {
       width: 90%; }
+      nav li {
+        width: 22%;
+      }
       nav li a {
-        font-size: 18px; } }
+        font-size: 13px; } }
 
 section {
   padding-top: 40px;
