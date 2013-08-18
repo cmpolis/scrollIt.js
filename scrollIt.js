@@ -21,7 +21,8 @@
         easing: 'linear',
         scrollTime: 600,
         activeClass: 'active',
-        onPageChange: null
+        onPageChange: null,
+        topOffset : 0
     };
 
     $.scrollIt = function(options) {
@@ -45,7 +46,7 @@
         var navigate = function(ndx) {
             if(ndx < 0 || ndx > lastIndex) return;
 
-            var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top;
+            var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset;
             $('html,body').animate({
                 scrollTop: targetTop,
                 easing: settings.easing
@@ -102,8 +103,8 @@
             var winTop = $(window).scrollTop();
 
             var visible = $('[data-scroll-index]').filter(function(ndx, div) {
-                return winTop >= $(div).offset().top &&
-                winTop < $(div).offset().top + $(div).outerHeight()
+                return winTop >= $(div).offset().top + settings.topOffset &&
+                winTop < $(div).offset().top + (settings.topOffset) + $(div).outerHeight()
             });
             var newActive = visible.first().attr('data-scroll-index');
             updateActive(newActive);
