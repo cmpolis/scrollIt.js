@@ -1,16 +1,16 @@
 /**
  * ScrollIt
  * ScrollIt.js(scroll•it•dot•js) makes it easy to make long, vertically scrolling pages.
- * 
+ *
  * Latest version: https://github.com/cmpolis/scrollIt.js
- * 
+ *
  * License <https://github.com/cmpolis/scrollIt.js/blob/master/LICENSE.txt>
  */
 (function($) {
     'use strict';
 
     var pluginName = 'ScrollIt',
-        pluginVersion = '1.0.1';
+        pluginVersion = '1.0.2';
 
     /*
      * OPTIONS
@@ -40,13 +40,13 @@
 
         /**
          * navigate
-         * 
+         *
          * sets up navigation animation
          */
         var navigate = function(ndx) {
             if(ndx < 0 || ndx > lastIndex) return;
 
-            var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset;
+            var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset + 1;
             $('html,body').animate({
                 scrollTop: targetTop,
                 easing: settings.easing
@@ -55,18 +55,18 @@
 
         /**
          * doScroll
-         * 
+         *
          * runs navigation() when criteria are met
          */
         var doScroll = function (e) {
-            var target = $(e.target).attr('data-scroll-nav') || 
+            var target = $(e.target).attr('data-scroll-nav') ||
             $(e.target).attr('data-scroll-goto');
             navigate(parseInt(target));
         };
 
         /**
          * keyNavigation
-         * 
+         *
          * sets up keyboard navigation behavior
          */
         var keyNavigation = function (e) {
@@ -83,12 +83,12 @@
 
         /**
          * updateActive
-         * 
+         *
          * sets the currently active item
          */
         var updateActive = function(ndx) {
             if(settings.onPageChange && ndx && (active != ndx)) settings.onPageChange(ndx);
-            
+
             active = ndx;
             $('[data-scroll-nav]').removeClass(settings.activeClass);
             $('[data-scroll-nav=' + ndx + ']').addClass(settings.activeClass);
@@ -96,7 +96,7 @@
 
         /**
          * watchActive
-         * 
+         *
          * watches currently active item and updates accordingly
          */
         var watchActive = function() {
