@@ -87,7 +87,8 @@
          * sets the currently active item
          */
         var updateActive = function(ndx) {
-            if(settings.onPageChange && ndx && (active != ndx)) settings.onPageChange(ndx);
+            ndx = parseInt(ndx);
+            if(settings.onPageChange && !isNaN(ndx) && (active != ndx)) settings.onPageChange(ndx);
             
             active = ndx;
             $('[data-scroll-nav]').removeClass(settings.activeClass);
