@@ -9,9 +9,9 @@
         "keydown",
         "keyboard"
     ],
-    "version": "1.0.1",
+    "version": "1.0.3",
     "author": {
-        "name": "Chris Polis and Adam Merrifield",
+        "name": "Chris Polis, Adam Merrifield and Frank S",
         "url": "https://github.com/cmpolis/scrollIt.js/blob/master/AUTHORS.txt"
     },
     "maintainers": [
@@ -23,7 +23,7 @@
         {
             "name": "Adam Merrifield",
             "email": "macagp@gmail.com",
-            "url": "http://seydesign.com"
+            "url": "http://adam.merrifield.ca"
         }
     ],
     "licenses": [
