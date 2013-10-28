@@ -10,7 +10,7 @@
     'use strict';
 
     var pluginName = 'ScrollIt',
-        pluginVersion = '1.0.2';
+        pluginVersion = '1.0.3';
 
     /*
      * OPTIONS
@@ -117,7 +117,10 @@
 
         $(window).on('keydown', keyNavigation);
 
-        $('body').on('click','[data-scroll-nav], [data-scroll-goto]', doScroll);
+        $('body').on('click','[data-scroll-nav], [data-scroll-goto]', function(e){
+            e.preventDefault();
+            doScroll(e);
+        });
 
     };
 }(jQuery));
