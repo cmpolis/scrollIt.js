@@ -1,0 +1,8 @@
+{
+	"name": "ScrollIt",
+	"version": "1.0.0",
+	"main": "./scrollIt.js",
+	"dependencies": {
+		"jquery": "~1.10.2"
+	}
+}
