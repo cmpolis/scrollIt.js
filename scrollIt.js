@@ -59,8 +59,8 @@
          * runs navigation() when criteria are met
          */
         var doScroll = function (e) {
-            var target = $(e.target).attr('data-scroll-nav') ||
-            $(e.target).attr('data-scroll-goto');
+            var target = $(e.target).closest("[data-scroll-nav]").attr('data-scroll-nav') ||
+            $(e.target).closest("[data-scroll-goto]").attr('data-scroll-goto');
             navigate(parseInt(target));
         };
 
