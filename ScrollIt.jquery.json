@@ -9,9 +9,9 @@
         "keydown",
         "keyboard"
     ],
-    "version": "1.0.3",
+    "version": "1.0.5",
     "author": {
-        "name": "Chris Polis, Adam Merrifield and Frank S",
+        "name": "Chris Polis, Adam Merrifield and others...",
         "url": "https://github.com/cmpolis/scrollIt.js/blob/master/AUTHORS.txt"
     },
     "maintainers": [

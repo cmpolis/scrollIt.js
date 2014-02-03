@@ -10,7 +10,7 @@
     'use strict';
 
     var pluginName = 'ScrollIt',
-        pluginVersion = '1.0.3';
+        pluginVersion = '1.0.5';
 
     /*
      * OPTIONS
@@ -22,6 +22,7 @@
         scrollTime: 600,
         activeClass: 'active',
         onPageChange: null,
+        onAfterPageChange:null,
         topOffset : 0
     };
 
@@ -47,10 +48,10 @@
             if(ndx < 0 || ndx > lastIndex) return;
 
             var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset + 1;
-            $('html,body').animate({
+            $('html').animate({
                 scrollTop: targetTop,
-                easing: settings.easing
-            }, settings.scrollTime);
+                easing: settings.easing,
+            }, settings.scrollTime, settings.onAfterPageChange);
         };
 
         /**
