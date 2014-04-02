@@ -71,6 +71,9 @@
          */
         var keyNavigation = function (e) {
             var key = e.which;
+            if($('html,body').is(':animated') && (key == settings.upKey || key == settings.downKey)) {
+                return false;
+            }
             if(key == settings.upKey && active > 0) {
                 navigate(parseInt(active) - 1);
                 return false;
