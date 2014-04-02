@@ -116,7 +116,7 @@
         /*
          * runs methods
          */
-        $(window).on('scroll',watchActive).on('scroll');
+        $(window).on('scroll',watchActive);
 
         $(window).on('keydown', keyNavigation);
 
