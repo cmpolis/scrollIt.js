@@ -22,7 +22,7 @@
         scrollTime: 600,
         activeClass: 'active',
         onPageChange: null,
-        topOffset : 0
+        topOffset : { val: 0}
     };
 
     $.scrollIt = function(options) {
@@ -46,7 +46,7 @@
         var navigate = function(ndx) {
             if(ndx < 0 || ndx > lastIndex) return;
 
-            var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset + 1;
+            var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset.val + 1;
             $('html,body').animate({
                 scrollTop: targetTop,
                 easing: settings.easing
@@ -61,7 +61,7 @@
         var doScroll = function (e) {
             var target = $(e.target).closest("[data-scroll-nav]").attr('data-scroll-nav') ||
             $(e.target).closest("[data-scroll-goto]").attr('data-scroll-goto');
-            navigate(parseInt(target));
+            navigate(parseInt(target, 10));
         };
 
         /**
@@ -75,10 +75,10 @@
                 return false;
             }
             if(key == settings.upKey && active > 0) {
-                navigate(parseInt(active) - 1);
+                navigate(parseInt(active, 10) - 1);
                 return false;
             } else if(key == settings.downKey && active < lastIndex) {
-                navigate(parseInt(active) + 1);
+                navigate(parseInt(active, 10) + 1);
                 return false;
             }
             return true;
@@ -106,8 +106,8 @@
             var winTop = $(window).scrollTop();
 
             var visible = $('[data-scroll-index]').filter(function(ndx, div) {
-                return winTop >= $(div).offset().top + settings.topOffset &&
-                winTop < $(div).offset().top + (settings.topOffset) + $(div).outerHeight()
+                return winTop >= $(div).offset().top + settings.topOffset.val &&
+                winTop < $(div).offset().top + (settings.topOffset.val) + $(div).outerHeight();
             });
             var newActive = visible.first().attr('data-scroll-index');
             updateActive(newActive);
