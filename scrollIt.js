@@ -25,6 +25,13 @@
         topOffset : { val: 0}
     };
 
+    var listeners = {
+        scroll : null,
+        keydown: null,
+        click: null,
+    };
+
+
     $.scrollIt = function(options) {
 
         /*
@@ -120,10 +127,24 @@
 
         $(window).on('keydown', keyNavigation);
 
-        $('body').on('click','[data-scroll-nav], [data-scroll-goto]', function(e){
+        var clickHandler = function(e){
             e.preventDefault();
             doScroll(e);
-        });
+        };
 
+        $('body').on('click','[data-scroll-nav], [data-scroll-goto]', clickHandler);
+
+        listeners.scroll = watchActive;
+        listeners.keydown = keyNavigation;
+        listeners.click = clickHandler;
     };
+
+    $.scrollIt.listeners = listeners;
+
+    $.scrollIt.destroy = function () {
+        $(window).off('scroll', listeners.scroll);
+        $(window).off('keydown', listeners.keydown);
+        $('body').off('click','[data-scroll-nav], [data-scroll-goto]', listeners.click);
+    };
+
 }(jQuery));
