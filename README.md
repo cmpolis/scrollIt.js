@@ -11,32 +11,32 @@ ScrollIt.js(scroll•it•dot•js) makes it easy to make long, vertically scrol
 
 ## Usage
 
-1. Include jQuery and scrollIt.js
+1) Include jQuery and scrollIt.js
 ```html
 <script src="jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="scrollIt.js" type="text/javascript"></script>
 ```
 
-2. Put a data-scroll-index attribute on each section
+2) Put a data-scroll-index attribute on each section
 ```html
 <div data-scroll-index="0">..content..</div>
 <div data-scroll-index="1">...</div>
 <div data-scroll-index="2">...</div>
 ```
 
-3. Put corresponding data-scroll-nav attributes on each nav 
+3) Put corresponding data-scroll-nav attributes on each nav 
 ```html
 <a data-scroll-nav="0">About</a>
 <a data-scroll-nav="1">Usage</a>
 <a data-scroll-nav="2">Options</a>
 ```
 
-4. For links to sections, put on a data-scroll-goto attribute
+4) For links to sections, put on a data-scroll-goto attribute
 ```html
 <a data-scroll-goto="0">Back to top</a>
 ```
 
-5. Call scrollIt()
+5) Call scrollIt()
 ```JavaScript
 $(function(){
   $.scrollIt();
