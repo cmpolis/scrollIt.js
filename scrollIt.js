@@ -32,7 +32,7 @@
          */
         var settings = $.extend(defaults, options),
             active = 0,
-            lastIndex = $('[data-scroll-index]:last').attr('data-scroll-index');
+            lastIndex = parseInt($('[data-scroll-index]:last').attr('data-scroll-index'));
 
         /*
          * METHODS
