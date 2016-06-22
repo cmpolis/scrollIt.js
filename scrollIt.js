@@ -49,8 +49,7 @@
             var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset + 1;
             $('html,body').animate({
                 scrollTop: targetTop,
-                easing: settings.easing
-            }, settings.scrollTime);
+            }, settings.scrollTime, settings.easing);
         };
 
         /**
