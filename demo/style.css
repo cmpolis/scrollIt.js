@@ -1,23 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700|Yrsa:400,700");
 body {
-  padding: 0px;
+  color: #2A3356;
+  font-family: "Yrsa", serif;
+  font-size: 24px;
   margin: 0px;
-  font-family: "Open Sans", sans-serif; }
+  padding: 0px; }
 
 h1, h2, h4, nav li a {
-  font-family: "Headland One", Georgia, serif; }
+  font-family: "Montserrat", sans-serif; }
 
 h1 {
-  font-size: 48px;
+  font-size: 4rem;
   margin-top: 80px;
-  margin-bottom: 10px;
-  color: #002e40; }
+  margin-bottom: 10px; }
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: 3.5rem; } }
 
 h2 {
-  margin-top: 80px;
-  font-size: 28px; }
+  font-size: 3rem;
+  margin-top: 80px; }
 
 h4 {
-  font-size: 20px;
+  font-size: 2rem;
   margin-bottom: 10px; }
 
 .why-list {
@@ -32,10 +37,12 @@ ul {
   list-style: none; }
 
 .nav-container {
-  background-color: #002e40;
+  background-color: #ffffff;
+  border-bottom: 1px solid #E8E2E2;
   width: 100%;
   position: fixed;
-  left: 0px; }
+  left: 0px;
+  z-index: 2000; }
 
 nav {
   text-align: center;
@@ -47,15 +54,13 @@ nav {
     width: 24%;
     display: inline-block; }
     nav li a {
-      font-size: 15px;
-      color: white; }
+      font-size: 1rem;
+      color: #2A3356; }
     nav li a.active {
-      color: #aaaaaa; }
+      color: #F35B25; }
   @media screen and (max-width: 640px) {
     nav {
-      width: 90%; }
-      nav li a {
-        font-size: 18px; } }
+      width: 90%; } }
 
 section {
   padding-top: 40px;
@@ -68,13 +73,10 @@ section {
       section .content {
         width: 90%; } }
     section .content a {
-      color: #002e40; }
+      color: #F35B25; }
 
 section:nth-child(odd) {
-  background-color: #002e40;
-  color: white; }
-  section:nth-child(odd) a {
-    color: white; }
+  background-color: #e1e5e7; }
 
 .bottom-link {
   margin-top: 80px;
@@ -84,4 +86,6 @@ section:nth-child(odd) {
   display: none; }
 
 .file-data {
-  font-size: 14px; }
+  font-size: 1rem; }
+
+/*# sourceMappingURL=style.css.map */
