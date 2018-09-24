@@ -22,7 +22,8 @@
         scrollTime: 600,
         activeClass: 'active',
         onPageChange: null,
-        topOffset : 0
+        topOffset : 0,
+        defaultIndex : 0
     };
 
     $.scrollIt = function(options) {
@@ -124,6 +125,7 @@
             e.preventDefault();
             doScroll(e);
         });
-
+        if (options.defaultIndex > 0)
+            navigate(options.defaultIndex);
     };
 }(jQuery));
